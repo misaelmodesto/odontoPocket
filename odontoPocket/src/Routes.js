@@ -7,6 +7,7 @@ import BoasVindas from './components/BoasVindas';
 import Principal from './components/Principal';
 import AdicionarContato from './components/AdicionarContato';
 import Conversa from './components/Conversa';
+import bot from './components/bot';
 
 export default props => (
 
@@ -15,8 +16,7 @@ export default props => (
                 key='formLogin' 
                 component={FormLogin} 
                 title="Login" 
-                hideNavBar={true}
-                initial 
+                hideNavBar={true}                 
             />
             <Scene 
                 key='formCadastro' 
@@ -49,6 +49,13 @@ export default props => (
                 component={Conversa} 
                 title="Conversa" 
                 hideNavBar={false}
+            />
+            <Scene 
+                key='bot'  
+                component={bot} 
+                title="bot" 
+                hideNavBar={false}
+                initial
             />
             
     </Router>
