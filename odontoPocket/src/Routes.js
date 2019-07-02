@@ -9,6 +9,7 @@ import AdicionarContato from './components/AdicionarContato';
 import Conversa from './components/Conversa';
 import bot from './components/bot';
 import TelaPrincipal from './components/TelaPrincipal';
+import SuaSaude from './components/SuaSaude';
 
 export default props => (
 
@@ -61,7 +62,13 @@ export default props => (
                 key='TelaPrincipal'  
                 component={TelaPrincipal} 
                 title="TelaPrincipal" 
-                hideNavBar={true}
+                hideNavBar={true}                
+            />
+            <Scene 
+                key='SuaSaude'  
+                component={SuaSaude} 
+                title="Sua Saude" 
+                hideNavBar={false}
                 initial
             />
             
