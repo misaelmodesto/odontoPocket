@@ -10,6 +10,7 @@ import Conversa from './components/Conversa';
 import bot from './components/bot';
 import TelaPrincipal from './components/TelaPrincipal';
 import SuaSaude from './components/SuaSaude';
+import SeuTratamento from './components/SeuTratamento';
 
 export default props => (
 
@@ -62,14 +63,20 @@ export default props => (
                 key='TelaPrincipal'  
                 component={TelaPrincipal} 
                 title="TelaPrincipal" 
-                hideNavBar={true}                
+                hideNavBar={true}  
+                initial              
             />
             <Scene 
                 key='SuaSaude'  
                 component={SuaSaude} 
                 title="Sua Saude" 
-                hideNavBar={false}
-                initial
+                hideNavBar={false}                
+            />
+            <Scene 
+                key='SeuTratamento'  
+                component={SeuTratamento} 
+                title="Seu Tratamento" 
+                hideNavBar={false}                
             />
             
     </Router>
