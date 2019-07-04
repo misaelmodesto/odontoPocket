@@ -11,6 +11,7 @@ import bot from './components/bot';
 import TelaPrincipal from './components/TelaPrincipal';
 import SuaSaude from './components/SuaSaude';
 import SeuTratamento from './components/SeuTratamento';
+import CadPaciente from './components/CadPaciente';
 
 export default props => (
 
@@ -64,7 +65,7 @@ export default props => (
                 component={TelaPrincipal} 
                 title="TelaPrincipal" 
                 hideNavBar={true}  
-                initial              
+                             
             />
             <Scene 
                 key='SuaSaude'  
@@ -77,6 +78,13 @@ export default props => (
                 component={SeuTratamento} 
                 title="Seu Tratamento" 
                 hideNavBar={false}                
+            />
+            <Scene 
+                key='CadPaciente'  
+                component={CadPaciente} 
+                title="Paciente de Bolso" 
+                hideNavBar={true} 
+                initial               
             />
             
     </Router>
