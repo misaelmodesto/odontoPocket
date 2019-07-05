@@ -4,16 +4,18 @@ import { connect } from 'react-redux';
 import { 
     modificaNome,
     modificaEmail, 
-    modificaSenha,      
-    cadastraUsuario 
+    modificaSenha,
+    modificaCro,      
+    cadastraUsuario
+    
 } from '../actions/AutenticacaoActions';
 
 class CadPaciente extends Component {
     
     _cadastroUsuario() {
-        const { nome, email, senha, } = this.props;
+        const { nome, email, senha, cro } = this.props;
 
-        this.props.cadastraUsuario({ nome, email, senha, });
+        this.props.cadastraUsuario({ nome, email, senha, cro });
     }
 
    renderBtnCadastros() {
@@ -33,7 +35,7 @@ class CadPaciente extends Component {
                 <View style={{ flex: 2, padding: 15, flexDirection: 'column'  }}>
 
                 <View style={{ flex:1 , alignItems: 'center' }}>
-                        <Text style={{ fontSize: 20, color: '#ffffff' }}>PACIENTE DE BOLSO</Text>  
+                        <Text style={{ fontSize: 20, color: '#ffffff' }}>DENTISTA DE BOLSO</Text>  
                         <Image
                         style={{height: 350, width: 350}}
                         source={require('../imgs/odp.png')}                        
@@ -65,6 +67,14 @@ class CadPaciente extends Component {
                             style={{ fontSize: 20, height: 45 }} 
                             onChangeText={texto => this.props.modificaSenha(texto)} 
                         />
+                        <TextInput 
+                            secureTextEntry 
+                            value={this.props.cro} 
+                            placeholder="Cro" 
+                            placeholderTextColor='#fff' 
+                            style={{ fontSize: 20, height: 45 }} 
+                            onChangeText={texto => this.props.modificaCro(texto)} 
+                        />
                         <Text style={{ color: '#000000', fontSize: 18, justifyContent: 'center' }}>{ this.props.erroCadastro }</Text>
                     </View>
 
@@ -89,6 +99,7 @@ const mapStateToProps = state => {
             nome: state.AutenticacaoReducer.nome,
             email: state.AutenticacaoReducer.email,
             senha: state.AutenticacaoReducer.senha,
+            cro: state.AutenticacaoReducer.cro,
             erroCadastro: state.AutenticacaoReducer.erroCadastro,
             loading_cadastro: state.AutenticacaoReducer.loading_cadastro
         }
@@ -101,6 +112,7 @@ export default connect(
         modificaEmail, 
         modificaSenha, 
         modificaNome,
+        modificaCro,
         cadastraUsuario 
     }
     )(CadPaciente);

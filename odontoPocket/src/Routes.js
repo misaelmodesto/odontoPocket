@@ -12,6 +12,7 @@ import TelaPrincipal from './components/TelaPrincipal';
 import SuaSaude from './components/SuaSaude';
 import SeuTratamento from './components/SeuTratamento';
 import CadPaciente from './components/CadPaciente';
+import CadDentista from './components/CadDentista';
 
 export default props => (
 
@@ -83,6 +84,12 @@ export default props => (
                 key='CadPaciente'  
                 component={CadPaciente} 
                 title="Paciente de Bolso" 
+                hideNavBar={true}                      
+            />
+            <Scene 
+                key='CadDentista'  
+                component={CadDentista} 
+                title="Dentista de Bolso" 
                 hideNavBar={true} 
                 initial               
             />

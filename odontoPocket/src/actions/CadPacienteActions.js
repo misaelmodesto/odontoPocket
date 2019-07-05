@@ -4,6 +4,7 @@ import b64 from 'base-64';
 import { MODIFICA_EMAIL, 
          MODIFICA_SENHA, 
          MODIFICA_NOME, 
+         MODIFICA_DENTISTA,
          CADASTRO_USUARIO_SUCESSO, 
          CADASTRO_USUARIO_ERRO, 
          LOGIN_USUARIO_SUCESSO, 
@@ -31,7 +32,13 @@ export const modificaNome = (texto) => {
         payload: texto
     }
 }
-export const cadastraUsuario = ({ nome, email, senha }) => {
+export const modificaDentista = (texto) => {
+    return {
+        type: MODIFICA_DENTISTA,
+        payload: texto
+    }
+}
+export const cadastraUsuario = ({ nome, email, senha, dentista }) => {
     return dispatch => {
 
         dispatch({ type: CADASTRO_EM_ANDAMENTO });
@@ -41,7 +48,7 @@ export const cadastraUsuario = ({ nome, email, senha }) => {
                 let emailb64 = b64.encode(email);
                 
                 firebase.database().ref(`/Paciente/${emailb64}`)
-                    .push({ nome })
+                    .push({ nome })                    
                     .then(value => cadastroUsuarioSucesso(dispatch)) 
                 
             })
@@ -51,7 +58,7 @@ export const cadastraUsuario = ({ nome, email, senha }) => {
 
 const cadastroUsuarioSucesso = (dispatch) => {
     dispatch({ type: CADASTRO_USUARIO_SUCESSO });
-    Actions.BoasVindas();
+    Actions.Principal();
 }
 
 const cadastroUsuarioErro = (erro, dispatch) => {

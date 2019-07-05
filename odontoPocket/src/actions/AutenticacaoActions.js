@@ -4,6 +4,7 @@ import b64 from 'base-64';
 import { MODIFICA_EMAIL, 
          MODIFICA_SENHA, 
          MODIFICA_NOME, 
+         MODIFICA_CRO,
          CADASTRO_USUARIO_SUCESSO, 
          CADASTRO_USUARIO_ERRO, 
          LOGIN_USUARIO_SUCESSO, 
@@ -31,7 +32,13 @@ export const modificaNome = (texto) => {
         payload: texto
     }
 }
-export const cadastraUsuario = ({ nome, email, senha }) => {
+export const modificaCro = (texto) => {
+    return {
+        type: MODIFICA_CRO,
+        payload: texto
+    }
+}
+export const cadastraUsuario = ({ nome, email, senha, cro }) => {
     return dispatch => {
 
         dispatch({ type: CADASTRO_EM_ANDAMENTO });

@@ -1,6 +1,7 @@
 export const MODIFICA_EMAIL = 'modifica_email';
 export const MODIFICA_SENHA = 'modifica_senha';
 export const MODIFICA_NOME = 'modifica_nome';
+export const MODIFICA_CRO = 'modifica_cro';
 export const CADASTRO_USUARIO_SUCESSO = 'cadstro_usuario_sucesso';
 export const CADASTRO_USUARIO_ERRO = 'cadstro_usuario_erro';
 export const LOGIN_USUARIO_SUCESSO = 'login_usuario_sucesso';
