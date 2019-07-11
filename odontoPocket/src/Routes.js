@@ -21,7 +21,8 @@ export default props => (
                 key='formLogin' 
                 component={FormLogin} 
                 title="Login" 
-                hideNavBar={true}                 
+                hideNavBar={true}  
+                initial               
             />
             <Scene 
                 key='formCadastro' 
@@ -33,7 +34,8 @@ export default props => (
                 key='BoasVindas' 
                 component={BoasVindas} 
                 title="Boas Vindas" 
-                hideNavBar={true} 
+                hideNavBar={true}
+                 
             />
             <Scene 
                 key='Principal'  
@@ -91,7 +93,7 @@ export default props => (
                 component={CadDentista} 
                 title="Dentista de Bolso" 
                 hideNavBar={true} 
-                initial               
+                               
             />
             
     </Router>

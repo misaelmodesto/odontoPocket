@@ -20,7 +20,7 @@ export const modificaAdicionaContatoEmail = texto => {
     }
 }
 
-export const adicionaContato = email => {
+export const adicionaContato = cro => {
     
     return dispatch => {
         let emailB64 = b64.encode(email);

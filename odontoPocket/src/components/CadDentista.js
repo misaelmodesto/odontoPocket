@@ -67,8 +67,7 @@ class CadPaciente extends Component {
                             style={{ fontSize: 20, height: 45 }} 
                             onChangeText={texto => this.props.modificaSenha(texto)} 
                         />
-                        <TextInput 
-                            secureTextEntry 
+                        <TextInput                             
                             value={this.props.cro} 
                             placeholder="Cro" 
                             placeholderTextColor='#fff' 
