@@ -23,7 +23,7 @@ class TelaPrincipal extends Component {
             <View style={{flex: 10, flexDirection: 'row',  padding: 10, justifyContent: 'space-between'}}>
 
                     <View style={styles.container}>
-                        <TouchableHighlight onPress={() => { Actions.BoasVindas() }} underlayColor={'transparent'}>
+                        <TouchableHighlight onPress={() => { Actions.formLogin() }} underlayColor={'transparent'}>
                             <Image
                                 style={styles.logo}
                                 source={require('../imgs/pac.png')}
@@ -32,7 +32,7 @@ class TelaPrincipal extends Component {
                     </View>
 
                     <View style={styles.container}>
-                        <TouchableHighlight onPress={() => { Actions.bot() }} underlayColor={'transparent'}>
+                        <TouchableHighlight onPress={() => { Actions.PacLogin() }} underlayColor={'transparent'}>
                             <Image
                                 style={styles.logo}
                                 source={require('../imgs/pac.png')}

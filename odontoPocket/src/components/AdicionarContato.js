@@ -54,7 +54,7 @@ class AdicionarContato extends Component {
 
 const mapStateToProps = state => (
     { 
-        adiciona_contato_cro: state.AppReducer.adiciona_contato_email,
+        adiciona_contato_email: state.AppReducer.adiciona_contato_email,
         cadastro_resultado_txt_erro: state.AppReducer.cadastro_resultado_txt_erro,
         cadastro_resultado_inclusao: state.AppReducer.cadastro_resultado_inclusao
     }

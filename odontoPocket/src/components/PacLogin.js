@@ -4,7 +4,7 @@ import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { modificaEmail, modificaSenha, autenticarUsuario } from '../actions/AutenticacaoActions';
 
-class formLogin extends Component {
+class PacLogin extends Component {
     _autenticarUsuario() {
         const { email, senha } = this.props;
 
@@ -28,7 +28,7 @@ class formLogin extends Component {
                 <View style={{ flex: 1, padding: 10 }} >
 
                 <View style={{ flex:1 , alignItems: 'center' }}>
-                        <Text style={{ fontSize: 20, color: '#ffffff' }}>DENTISTA DE BOLSO</Text>  
+                        <Text style={{ fontSize: 20, color: '#ffffff' }}>PACIENTE DE BOLSO</Text>  
                         <Image
                         style={{height: 350, width: 350}}
                         source={require('../imgs/odp.png')}                        
@@ -60,7 +60,7 @@ class formLogin extends Component {
 
                         <View style={{ flex:1 , alignItems: 'center' }} ></View>
 
-                        <TouchableHighlight onPress={() => Actions.CadDentista()} underlayColor={'transparent'}>
+                        <TouchableHighlight onPress={() => Actions.CadPaciente()} underlayColor={'transparent'}>
                             <Text style={{ fontSize: 20, color: '#fff'  }} >Cadastre-se</Text>
                         </TouchableHighlight>
                     </View>
@@ -85,4 +85,4 @@ const mapStateToProps = state => (
     }
 )
 
-export default connect(mapStateToProps, { modificaEmail, modificaSenha, autenticarUsuario })(formLogin);
+export default connect(mapStateToProps, { modificaEmail, modificaSenha, autenticarUsuario })(PacLogin);

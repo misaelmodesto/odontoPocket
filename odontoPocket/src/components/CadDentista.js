@@ -3,14 +3,14 @@ import { View, TextInput, Button, Image, Text, ActivityIndicator, ImageBackgroun
 import { connect } from 'react-redux';
 import { 
     modificaNome,
-    modificaEmail, 
+    modificaEmail,  
     modificaSenha,
     modificaCro,      
     cadastraUsuario
     
 } from '../actions/AutenticacaoActions';
 
-class CadPaciente extends Component {
+class CadDentista extends Component {
     
     _cadastroUsuario() {
         const { nome, email, senha, cro } = this.props;
@@ -114,4 +114,4 @@ export default connect(
         modificaCro,
         cadastraUsuario 
     }
-    )(CadPaciente);
+    )(CadDentista);

@@ -28,7 +28,7 @@ class formCadastro extends Component {
    } 
    render() { 
         return (
-            <ImageBackground source={require('../imgs/bg.png')} style={{width: '100%', height: '100%'}}>
+            <ImageBackground source={require('../imgs/PlanFundo.jpg')} style={{width: '100%', height: '100%'}}>
             
                 <View style={{ flex: 1, padding: 10  }}>
                     <View style={{ flex: 4, justifyContent: 'center' }}>

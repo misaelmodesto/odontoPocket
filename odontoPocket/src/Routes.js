@@ -13,6 +13,7 @@ import SuaSaude from './components/SuaSaude';
 import SeuTratamento from './components/SeuTratamento';
 import CadPaciente from './components/CadPaciente';
 import CadDentista from './components/CadDentista';
+import PacLogin from './components/PacLogin';
 
 export default props => (
 
@@ -22,7 +23,7 @@ export default props => (
                 component={FormLogin} 
                 title="Login" 
                 hideNavBar={true}  
-                initial               
+                               
             />
             <Scene 
                 key='formCadastro' 
@@ -35,7 +36,7 @@ export default props => (
                 component={BoasVindas} 
                 title="Boas Vindas" 
                 hideNavBar={true}
-                 
+                
             />
             <Scene 
                 key='Principal'  
@@ -68,7 +69,7 @@ export default props => (
                 component={TelaPrincipal} 
                 title="TelaPrincipal" 
                 hideNavBar={true}  
-                             
+                initial            
             />
             <Scene 
                 key='SuaSaude'  
@@ -86,14 +87,22 @@ export default props => (
                 key='CadPaciente'  
                 component={CadPaciente} 
                 title="Paciente de Bolso" 
-                hideNavBar={true}                      
+                hideNavBar={true}   
+                                   
             />
             <Scene 
                 key='CadDentista'  
                 component={CadDentista} 
                 title="Dentista de Bolso" 
-                hideNavBar={true} 
-                               
+                hideNavBar={true}             
+                          
+            />
+            <Scene 
+                key='PacLogin'  
+                component={PacLogin} 
+                title="Paciente de Bolso" 
+                hideNavBar={true}             
+                          
             />
             
     </Router>

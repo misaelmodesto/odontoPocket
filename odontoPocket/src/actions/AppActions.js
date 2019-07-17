@@ -20,8 +20,7 @@ export const modificaAdicionaContatoEmail = texto => {
     }
 }
 
-export const adicionaContato = cro => {
-    
+export const adicionaContato = email => {
     return dispatch => {
         let emailB64 = b64.encode(email);
     
@@ -60,7 +59,7 @@ const adicionaContatoErro = (erro, dispatch) => (
             type: ADICIONA_CONTATO_ERRO, 
             payload: erro
         }
-    )
+   )
 )
 
 const adicionaContatoSucesso = dispatch => (
