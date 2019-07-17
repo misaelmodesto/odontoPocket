@@ -11,7 +11,7 @@ class AdicionarContato extends Component {
                 <View style={{ flex: 1 }}>
                     <View style={{ flex: 1, justifyContent: 'center' }}>
                         <TextInput 
-                            placeholder='CRO'
+                            placeholder='E-mail:'
                             style={{ fontSize: 20, height: 45 }}
                             onChangeText={(texto) => this.props.modificaAdicionaContatoEmail(texto)}
                             value={this.props.adiciona_contato_email}

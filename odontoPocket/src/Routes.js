@@ -17,7 +17,7 @@ import PacLogin from './components/PacLogin';
 
 export default props => (
 
-    <Router navigationBarStyle={{ backgroundColor: '#115E54' }} titleStyle={{ color: '#fff' }}>
+    <Router navigationBarStyle={{ backgroundColor: '#ad1c05' }} titleStyle={{ color: '#fff' }}>
             <Scene 
                 key='formLogin' 
                 component={FormLogin} 
@@ -75,13 +75,13 @@ export default props => (
                 key='SuaSaude'  
                 component={SuaSaude} 
                 title="Sua Saude" 
-                hideNavBar={false}                
+                hideNavBar={true}                
             />
             <Scene 
                 key='SeuTratamento'  
                 component={SeuTratamento} 
                 title="Seu Tratamento" 
-                hideNavBar={false}                
+                hideNavBar={true}                
             />
             <Scene 
                 key='CadPaciente'  
